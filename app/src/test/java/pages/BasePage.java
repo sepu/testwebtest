@@ -20,6 +20,7 @@ public class BasePage {  // Creamos la clase BasePage
     private static WebDriverWait wait; // Creo método de espera
 
     static {  // Esto se ejecuta al principio de todo
+        System.setProperty("webdriver.chrome.driver","/usr/local/bin/chromedriver");
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--remote-allow-origins=*"); // Añado este argumento para permitir al driver cargar urls externas
         driver = new ChromeDriver(chromeOptions);  // Le pasamos al driver la options
